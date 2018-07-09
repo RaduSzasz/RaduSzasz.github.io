@@ -17,8 +17,30 @@
       align-items: center;
       justify-content: center;
 
-      .avatar {
-        border-radius: 50%;
+      .home-presentation {
+        width: 100%;
+        padding: 50px;
+
+        .home-intro {
+          width: 100px;
+          float: left;
+          font-size: 40pt;
+          font-weight: bolder;
+          font-family: "Arial Black", fantasy;
+          color: #30404d;
+        }
+
+        .avatar {
+          float: right;
+          border-radius: 50%;
+          width: 300px;
+        }
+
+      }
+
+      .social-media {
+        width: 30px;
+        margin-right: 100px;
       }
     }
 
