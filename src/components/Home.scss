@@ -1,0 +1,34 @@
+.home {
+  background: burlywood;
+  height: 100%;
+  display: flex;
+
+  .home-static {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: aliceblue;
+
+    .home-static-body {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .avatar {
+        border-radius: 50%;
+      }
+    }
+
+    .pt-navbar {
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .home-body {
+    flex: 3 0 auto;
+    background: antiquewhite;
+  }
+}
