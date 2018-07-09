@@ -1,5 +1,6 @@
+@import "../index.scss";
+
 .home {
-  background: burlywood;
   height: 100%;
   display: flex;
 
@@ -7,7 +8,7 @@
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    background: aliceblue;
+    background: $background;
 
     .home-static-body {
       flex: 1 0 auto;
