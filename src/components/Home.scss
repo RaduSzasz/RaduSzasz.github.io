@@ -95,7 +95,7 @@
             .company-header {
               width: 100%;
               display: flex;
-              margin: 0 0 50px 0;
+              margin-bottom: 20px;
 
               .company-title-role {
                 flex: 1 0 auto;
@@ -103,13 +103,13 @@
                 text-align: left;
 
                 .company-title {
-                  font-size: 24pt;
+                  font-size: 20pt;
                   font-weight: bold;
                   color: #30404d;
                 }
 
                 .company-role {
-                  font-size: 12pt;
+                  font-size: 10pt;
                   font-weight: bold;
                   color: #394b59;
                 }
@@ -124,6 +124,9 @@
             }
 
             .company-description {
+              font-size: 8pt;
+              text-align: left;
+              color: #5c7080;
             }
           }
         }
