@@ -1,4 +1,4 @@
-import { Alignment, Button, Navbar, NavbarGroup } from "@blueprintjs/core";
+import { Alignment, Button, Card, Navbar, NavbarGroup } from "@blueprintjs/core";
 import * as React from "react";
 import { changePage } from "../Actions";
 import { Pages } from "../Types";
@@ -11,6 +11,7 @@ import quoraActive from "./quoraActive.png";
 import quoraPassive from "./quoraPassive.png";
 import { SocialMediaHandle } from "./SocialMediaHandle";
 import unknown from "./Unknown.png"
+import { WorkCard } from "./WorkCard";
 
 export class Home extends React.Component<{}, {}> {
   public render() {
@@ -26,7 +27,7 @@ export class Home extends React.Component<{}, {}> {
           <div className="home-static-body">
             <div className="home-presentation">
               <div className="home-intro">
-                Developer. Developing.
+                Hey! Whatever!
               </div>
               <img src={unknown} className="avatar" />
             </div>
@@ -50,7 +51,18 @@ export class Home extends React.Component<{}, {}> {
           </div>
         </div>
         <div className="home-body">
-          bcd
+          <div className="home-section">
+            <span className="section-title">What I'm doing</span>
+            <div className="current-work">
+              Facebook
+            </div>
+            <div className="past-experience">
+              <WorkCard/>
+              <Card className="past-experience-content">
+                Palantir Technologies
+              </Card>
+            </div>
+          </div>
         </div>
       </div>
     );
