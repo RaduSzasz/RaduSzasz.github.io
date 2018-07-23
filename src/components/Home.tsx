@@ -20,8 +20,8 @@ export class Home extends React.Component<{}, {}> {
         <div className="home-static">
           <Navbar>
             <NavbarGroup align={Alignment.LEFT}>
-              <Button text="Home" className="pt-minimal" onClick={changeToHome}/>
-              <Button text="Blog" className="pt-minimal" />
+              <Button text="Home" className="bp3-minimal" onClick={changeToHome}/>
+              <Button text="Blog" className="bp3-minimal" />
             </NavbarGroup>
           </Navbar>
           <div className="home-static-body">
