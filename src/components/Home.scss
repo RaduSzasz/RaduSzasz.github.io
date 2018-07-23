@@ -66,30 +66,32 @@
   }
 
   .home-body {
-    flex: 3 0 auto;
+    flex: 1 0 0;
     background: antiquewhite;
 
     .home-section {
       padding: 50px;
       background: blue;
+      text-align: left;
 
       .section-title {
-        text-align: left;
         font-size: 40pt;
         font-weight: bolder;
         font-family: "Arial Black", fantasy;
         color: #30404d;
+        margin-bottom: 50px;
       }
 
-      .past-experience {
+      .experience {
         display: flex;
         flex-flow: row wrap;
         margin: 0 -50px 0 0;
 
         .past-experience-content {
-          flex: 1 0 300px;
+          flex: 1 0 400px;
           height: 300px;
           margin-right: 50px;
+          margin-bottom: 50px;
 
           .past-experience-company {
             .company-header {

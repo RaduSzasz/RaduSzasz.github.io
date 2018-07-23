@@ -1,4 +1,4 @@
-import { Alignment, Button, Card, Navbar, NavbarGroup } from "@blueprintjs/core";
+import { Alignment, Button, Navbar, NavbarGroup } from "@blueprintjs/core";
 import * as React from "react";
 import { changePage } from "../Actions";
 import { Pages } from "../Types";
@@ -52,15 +52,29 @@ export class Home extends React.Component<{}, {}> {
         </div>
         <div className="home-body">
           <div className="home-section">
-            <span className="section-title">What I'm doing</span>
-            <div className="current-work">
-              Facebook
-            </div>
-            <div className="past-experience">
-              <WorkCard/>
-              <Card className="past-experience-content">
-                Palantir Technologies
-              </Card>
+            <div className="section-title">What I'm doing</div>
+            <div className="experience">
+              <WorkCard
+                active={true}
+                company="Facebook"
+                role="Software Engineer"
+                description="I would love to know this myself"
+              />
+              <WorkCard
+                active={false}
+                company="Palantir Technologies"
+                role="Forward Deployed Engineer Intern"
+                description="Worked in a medium sized team on a product delivered to a CPG company. On the frontend I
+refactored and added new features to a React Redux application written in TypeScript, while on
+the Java Dropwizard backend, my activity focused on querying the data required to respond to the
+requests received in an ecient manner. As side tasks, I worked on data processing and collection."
+              />
+              <WorkCard
+                active={false}
+                company="Palantir Technologies"
+                role="Forward Deployed Engineer Intern"
+                description="I will fill this in a while"
+              />
             </div>
           </div>
         </div>
