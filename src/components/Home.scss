@@ -47,13 +47,14 @@
       }
 
       .social-media-group {
-        display: flex;
-        justify-content: space-around;
         height: 30px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        align-self: flex-start;
 
         .social-media {
           width: 30px;
-          margin-right: 100px;
+          margin-right: 30px;
         }
 
       }
@@ -68,11 +69,19 @@
   .home-body {
     flex: 1 0 0;
     background: antiquewhite;
+    overflow: scroll;
 
     .home-section {
       padding: 50px;
-      background: blue;
       text-align: left;
+
+      &.work {
+        background: $cobalt5;
+      }
+
+      &.education {
+        background: $turquoise3;
+      }
 
       .section-title {
         font-size: 40pt;
@@ -84,10 +93,18 @@
 
       .experience {
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: column;
         margin: 0 -50px 0 0;
 
+        .past-experience {
+          display: flex;
+          flex-flow: row wrap;
+        }
+
         .past-experience-content {
+          &.active {
+            flex: 0 0 auto;
+          }
           flex: 1 0 400px;
           height: 300px;
           margin-right: 50px;
