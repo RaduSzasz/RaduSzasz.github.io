@@ -1,19 +1,18 @@
 import { Alignment, Button, Navbar, NavbarGroup } from "@blueprintjs/core";
 import * as React from "react";
 import { changePage } from "../Actions";
+import facebookActive from "../media/facebookActive.svg";
+import facebookPassive from "../media/facebookPassive.svg";
+import linkedinActive from "../media/linkedinActive.png";
+import linkedinPassive from "../media/linkedinPassive.png";
+import quoraActive from "../media/quoraActive.png";
+import quoraPassive from "../media/quoraPassive.png";
+import unknown from "../media/Unknown.png"
 import { Pages } from "../Types";
-import facebookActive from "./facebookActive.svg";
-import facebookPassive from "./facebookPassive.svg";
+import { WORK_EXPERIENCE } from "../WorkExperience";
 import "./Home.css";
-import linkedinActive from "./linkedinActive.png";
-import linkedinPassive from "./linkedinPassive.png";
-import palantirLogo from "./Palantir-logo.png";
-import quoraActive from "./quoraActive.png";
-import quoraPassive from "./quoraPassive.png";
 import { Section } from "./Section";
 import { SocialMediaHandle } from "./SocialMediaHandle";
-import unknown from "./Unknown.png"
-import { WorkCard } from "./WorkCard";
 
 export class Home extends React.Component<{}, {}> {
   public render() {
@@ -53,54 +52,17 @@ export class Home extends React.Component<{}, {}> {
           </div>
         </div>
         <div className="home-body">
+          <div className="section-bar">
+            <div className="section-entry work">
+              Work experience
+            </div>
+            <div className="section-entry education">
+              Education
+            </div>
+          </div>
           <Section
             className="work"
-            title="Work experience"
-            body={
-              <div className="experience">
-                <WorkCard
-                  active={true}
-                  company="Facebook"
-                  logo={facebookActive}
-                  role="Software Engineer"
-                  description="I would love to know this myself"
-                />
-                <div className="past-experience">
-                  <WorkCard
-                    active={false}
-                    company="Palantir Technologies"
-                    logo={palantirLogo}
-                    role="Forward Deployed Engineer Intern"
-                    description="Worked in a medium sized team on a product delivered to a CPG company. On the frontend I
-    refactored and added new features to a React Redux application written in TypeScript, while on
-    the Java Dropwizard backend, my activity focused on querying the data required to respond to the
-    requests received in an ecient manner. As side tasks, I worked on data processing and collection."
-                  />
-                  <WorkCard
-                    active={false}
-                    company="Palantir Technologies"
-                    logo={palantirLogo}
-                    role="Forward Deployed Engineer Intern"
-                    description="I will fill this in a while"
-                  />
-                </div>
-              </div>
-            }
-          />
-          <Section
-            className="education"
-            title="Education"
-            body={
-              <div className="experience">
-                <WorkCard
-                  active={true}
-                  company="Imperial College London"
-                  role="MEng Computing"
-                  description="I did stuff here"
-                  logo={palantirLogo}
-                />
-              </div>
-            }
+            experiences={WORK_EXPERIENCE}
           />
         </div>
       </div>
