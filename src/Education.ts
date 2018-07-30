@@ -5,7 +5,12 @@ import imperialPassive from "./media/imperialPassive.png";
 export const EDUCATION: IExperience[] = [
   {
     activeLogo: imperialActive,
-    description: "Stuff I did here",
+    description: `
+Studied four years to achieve a Masters of Engineering Degree.
+    
+# Prizes
+    
+- Formicary bla`,
     passiveLogo: imperialPassive,
     role: "MEng Computing",
     time: "Oct 2014 - Jun 2018",

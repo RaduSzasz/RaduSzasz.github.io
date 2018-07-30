@@ -1,5 +1,6 @@
 import * as classNames from "classnames";
 import * as React from "react";
+import * as ReactMarkdown from "react-markdown";
 import { Timeline } from "./Timeline";
 
 export interface IExperience {
@@ -54,7 +55,10 @@ export class Section extends React.Component<ISectionProps, ISectionState> {
           </div>
           <img className="company-logo" src={activeLogo} />
         </div>
-        <div className="home-section-body">{description}</div>
+        <ReactMarkdown
+          className="home-section-body"
+          source={description}
+        />
       </div>
     );
   }
