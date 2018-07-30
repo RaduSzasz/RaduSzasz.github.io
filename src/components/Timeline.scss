@@ -6,6 +6,11 @@
   .timeline-btn {
     width: 50px;
     height: 50px;
-    margin-right: 50px;
+    margin-right: 30px;
+    border-radius: 3pt;
+  }
+
+  :last-child {
+    margin-right: 0;
   }
 }

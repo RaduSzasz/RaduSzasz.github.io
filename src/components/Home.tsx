@@ -1,6 +1,7 @@
 import { Alignment, Button, Navbar, NavbarGroup } from "@blueprintjs/core";
 import * as React from "react";
 import { changePage } from "../Actions";
+import { EDUCATION } from "../Education";
 import facebookActive from "../media/facebookActive.svg";
 import facebookPassive from "../media/facebookPassive.svg";
 import linkedinActive from "../media/linkedinActive.png";
@@ -52,17 +53,15 @@ export class Home extends React.Component<{}, {}> {
           </div>
         </div>
         <div className="home-body">
-          <div className="section-bar">
-            <div className="section-entry work">
-              Work experience
-            </div>
-            <div className="section-entry education">
-              Education
-            </div>
-          </div>
           <Section
             className="work"
             experiences={WORK_EXPERIENCE}
+            title="Work Experience"
+          />
+          <Section
+            className="education"
+            experiences={EDUCATION}
+            title="Education"
           />
         </div>
       </div>

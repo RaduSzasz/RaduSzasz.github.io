@@ -14,6 +14,7 @@ export interface IExperience {
 export interface ISectionProps {
   className?: string;
   experiences: IExperience[];
+  title: string
 }
 
 export interface ISectionState {
@@ -29,19 +30,22 @@ export class Section extends React.Component<ISectionProps, ISectionState> {
   }
 
   public render() {
-    const { className, experiences } = this.props;
+    const { className, experiences, title: sectionTitle } = this.props;
     const { selectedExperienceIdx: selectedIdx } = this.state;
     const { activeLogo, description, role, time, title } = experiences[selectedIdx];
     return (
       <div className={classNames("home-section", className)}>
-        <Timeline
-          entries={experiences.map((exp, idx) => ({
-            active: selectedIdx === idx,
-            activeLogo: exp.activeLogo,
-            onClick: () => this.setState({ selectedExperienceIdx: idx }),
-            passiveLogo: exp.passiveLogo,
-          }))}
-        />
+        <div className="section-header">
+          <div className="section-title">{sectionTitle}</div>
+          <Timeline
+            entries={experiences.map((exp, idx) => ({
+              active: selectedIdx === idx,
+              activeLogo: exp.activeLogo,
+              onClick: () => this.setState({ selectedExperienceIdx: idx }),
+              passiveLogo: exp.passiveLogo,
+            }))}
+          />
+        </div>
         <div className="home-section-header">
           <div className="company-title-role">
             <div className="company-title">{title}</div>

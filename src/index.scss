@@ -1,14 +1,19 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 
 $background: #fafafa;
-$cobalt5: #669eff;
-$turquoise3: #00B3A4;
+$light-blue: #a8d0e6;
+$cs-grey: #e0e1e3;
+$cs-blue: #ace3d0;
+$cs-blue2: #6dc3c0;
+$cs-blue3: #36978e;
+$cs-brown: #89847e;
+$cs-cream: #e7dbc3;
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: $background;
+  background: $cs-grey;
 }
 
 body.noScroll {
